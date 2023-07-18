@@ -8,28 +8,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class HomeController extends AbstractController
 {
-
-    /**
-     * @Route("/hello/{prenom}/{age}", name="hello")
-     * @Route("/hello", name="hello_base")
-     * @Route("/hello/{prenom}", name="hello_prenom")
-     * Montre la page qui dit bonjour
-     * @param string $prenom
-     * @param string $age
-     * @return Response
-     */
-    public function hello($prenom ="no name", $age ="pas d'age")
-    {
-
-     return $this->render(
-         'hello.html.twig',
-        [
-            'prenom' => $prenom,
-            'age' => $age
-        ]
-    );
-            }
-
     /**
      * @Route("/", name="homepage")
      */
