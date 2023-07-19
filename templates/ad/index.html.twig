@@ -7,22 +7,25 @@
         <h1>Voici les annonces de nos hôtes</h1>
         <div class="row">
             {% for ad in ads %}
+                {% set url = path('ads_show', {'slug': ad.slug})%}
                 <div class="col-md-4">
                     <div class="card bg-light mb-3">
                         <div class="card-header text-center">
                             {{ ad.rooms }} chambres, <strong>{{ ad.price }}€ / nuit</strong>
                             <small>Pas encore noté</small>
                         </div>
-                        <img src="{{ ad.coverImage }}" alt="Image de l'appart"
-                             style="height:200px; width:100%; display: block">
+                        <a href="{{ url }}">
+                            <img src="{{ ad.coverImage }}" alt="Image de l'appart"
+                                 style="height:200px; width:100%; display: block">
+                        </a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="{{ path('ads_show', {'slug': ad.slug}) }}">{{ ad.title }}</a>
+                                <a href="{{ url }}">{{ ad.title }}</a>
                             </h4>
                             <p class="card-text">
-                            <p>{{ ad.introduction }}</p>
+                                {{ ad.introduction }}
                             </p>
-                            <a href="{{ path('ads_show', {'slug': ad.slug}) }}" class="btn btn-primary">En savoir
+                            <a href="{{ url }}" class="btn btn-primary">En savoir
                                 plus</a>
                         </div>
                     </div>
