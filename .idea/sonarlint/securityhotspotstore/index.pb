@@ -25,9 +25,13 @@ P
  src/DataFixtures/AppFixtures.php,b\d\bd40e5504ff9d25586c516537316c24981df19f7
 K
 templates/ad/show.html.twig,3\0\307c98e1356f72ca453a8019fd245f2d413cf125
-H
-templates/base.html.twig,f\f\ffb3f1cfd73fdec1f0c80c63d0b5bbc1fff22022
 Q
 !src/Controller/HomeController.php,a\d\ad8b439416d1e02614f47c5b471c7c4e587dca82
 B
 public/css/app.css,a\e\aed169877220cb60c39687eb7ae1de7d4fb7946f
+L
+templates/ad/index.html.twig,2\9\29c7b7a9c211ce601b9f94ee05ee7df4da387def
+H
+templates/home.html.twig,3\8\38ac5fc300d52f94b369e87fbb1937abe29f831f
+I
+config/packages/twig.yaml,8\a\8a5c55d47e428b829ef7645f00a0b768cef8a5bf
