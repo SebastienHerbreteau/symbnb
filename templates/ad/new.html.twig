@@ -18,6 +18,9 @@
 {% block _ad_images_widget %}
 
     {{ form_widget(form) }}
+
+    <input type="hidden" id="widgets-counter" value="0">
+
     <div class="form-group">
         <button type="button" id="add-image" class="btn btn-primary mb-3">Ajouter une image</button>
     </div>
@@ -49,9 +52,13 @@
     <script>
         let addImages = document.querySelector('#add-image');
         let imagesContainer = document.querySelector('#ad_images')
+        let inputHidden = document.querySelector('#widgets-counter')
+
         addImages.addEventListener('click', () => {
-            const index = imagesContainer.getElementsByClassName('form-group').length;
+            const index = inputHidden.value;
+            console.log(index)
             imagesContainer.innerHTML += (imagesContainer.dataset.prototype).replace(/__name__/g, index);
+            ++inputHidden.value
         deleteButtons();
         })
 
@@ -61,7 +68,6 @@
             buttons.forEach((button) => {
                 button.addEventListener("click", () => {
                     const target = button.dataset.target;
-
                     const cible = document.querySelector(`#${target}`);
                     cible.remove();
                 })
