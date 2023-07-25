@@ -35,3 +35,23 @@ H
 templates/home.html.twig,3\8\38ac5fc300d52f94b369e87fbb1937abe29f831f
 I
 config/packages/twig.yaml,8\a\8a5c55d47e428b829ef7645f00a0b768cef8a5bf
+S
+#templates/partials/header.html.twig,5\7\5752e95f1a137dd963d74560b651e4b737f81ce0
+S
+#templates/partials/footer.html.twig,0\4\04ab3cf5bdb26445f5369d44c28f621f80fba642
+Q
+!templates/partials/head.html.twig,b\5\b5b2bf42bacf4c221a0784b49a25176264097119
+S
+#templates/partials/script.html.twig,a\4\a4706a38b144762fdec28b00cf896cb31eaae721
+F
+src/Form/ImageType.php,8\7\870ef4629e379af67632f80e83cadb75e9535f81
+C
+src/Form/AdType.php,4\1\4177d140af15f7422ea32bb1070ec04b726fc58d
+H
+templates/base.html.twig,f\f\ffb3f1cfd73fdec1f0c80c63d0b5bbc1fff22022
+O
+src/Controller/AdController.php,d\6\d603208054867be3b8db51a39d747da64b14f820
+C
+public/js/script.js,a\4\a415e66bfdba45d232667d640b13492fa370a26f
+J
+templates/ad/new.html.twig,3\7\370d0c1b9af4f80702b11de32e4080109306c710
