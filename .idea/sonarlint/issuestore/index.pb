@@ -19,16 +19,12 @@ B
 .env,3\c\3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
 O
 src/Repository/AdRepository.php,d\c\dc4235411055deda9dda2f53267148c4b0f1d736
-A
-src/Entity/Ad.php,6\a\6ac19b5f0d35804f3a34fe65702a0d7c945605b9
 P
  src/DataFixtures/AppFixtures.php,b\d\bd40e5504ff9d25586c516537316c24981df19f7
 Q
 !src/Controller/HomeController.php,a\d\ad8b439416d1e02614f47c5b471c7c4e587dca82
 K
 templates/ad/show.html.twig,3\0\307c98e1356f72ca453a8019fd245f2d413cf125
-B
-public/css/app.css,a\e\aed169877220cb60c39687eb7ae1de7d4fb7946f
 L
 templates/ad/index.html.twig,2\9\29c7b7a9c211ce601b9f94ee05ee7df4da387def
 H
