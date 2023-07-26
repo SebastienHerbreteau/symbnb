@@ -8,12 +8,13 @@
         <div class="container">
             <h1>
                 {{ ad.title }}
-                <p>{{ ad.introduction }}</p>
-                <p class="h2">
-                    <strong>{{ ad.rooms }} chambres</strong> pour <strong> {{ ad.price }}€</strong> par nuit.
-                </p>
-                <a href="#" class="btn btn-primary">Réserver</a>
             </h1>
+            <p>{{ ad.introduction }}</p>
+            <p class="h2">
+                <strong>{{ ad.rooms }} chambres</strong> pour <strong> {{ ad.price }}€</strong> par nuit.
+            </p>
+            <a href="#" class="btn btn-primary">Réserver</a>
+
         </div>
     </div>
 
@@ -23,20 +24,22 @@
                 {{ ad.content }}
                 <div id="carouselExampleIndicators" class="carousel slide">
                     <div class="carousel-indicators">
-                        {%  for image in ad.images %}
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ loop.index0 }}"
-                                {% if loop.first %}class="active"{% endif %} aria-current="true" aria-label="Slide {{ loop.index0 }}"></button>
-                       {% endfor %}
+                        {% for image in ad.images %}
+                            <button type="button" data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide-to="{{ loop.index0 }}"
+                                    {% if loop.first %}class="active"{% endif %} aria-current="true"
+                                    aria-label="Slide {{ loop.index0 }}"></button>
+                        {% endfor %}
                     </div>
                     <div class="carousel-inner">
                         {% for image in ad.images %}
-                        <div class="carousel-item {% if loop.first %}active{% endif %}">
-                            <img src="{{ image.url }}" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>{{ ad.title }}</h5>
-                                <p>{{ image.caption }}</p>
+                            <div class="carousel-item {% if loop.first %}active{% endif %}">
+                                <img src="{{ image.url }}" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>{{ ad.title }}</h5>
+                                    <p>{{ image.caption }}</p>
+                                </div>
                             </div>
-                        </div>
                         {% endfor %}
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"

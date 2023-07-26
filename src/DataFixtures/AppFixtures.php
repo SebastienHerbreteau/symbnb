@@ -4,6 +4,7 @@ namespace App\DataFixtures;
 
 use App\Entity\Ad;
 use App\Entity\Image;
+use App\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use Faker\Factory;
@@ -14,6 +15,33 @@ class AppFixtures extends Fixture
     {
         $faker = Factory::create('fr_FR');
 
+        //Gestion utilisateurs
+        $users = [];
+        $genres = ['male', 'female'];
+
+        for ($i = 1; $i <= 10; $i++) {
+            $user = new User();
+
+            $genre = $faker->randomElement($genres);
+
+            $picture = 'https://randomuser.me/api/portraits/';
+            $pictureId = $faker->numberBetween(1, 99) . '.jpg';
+
+            $picture .= ($genre == 'male' ? 'men/' : 'women/') . $pictureId;
+
+            $user->setFirstName($faker->firstName($genre))
+                ->setLastName($faker->lastName)
+                ->setEmail($faker->email)
+                ->setIntroduction($faker->sentence())
+                ->setDescription('<p>' . join('</p><p>', $faker->paragraphs(3)) . '</p>')
+                ->setPicture($picture)
+                ->setHash('password');
+            $manager->persist($user);
+            $users[] = $user;
+        }
+
+        //Gestion annonces
+
         for ($i = 1; $i <= 30;
              $i++) {
 
@@ -23,12 +51,15 @@ class AppFixtures extends Fixture
             $introduction = $faker->paragraph(2);
             $content = implode($faker->paragraphs(5));
 
+            $user = $users[rand(0, count($users) - 1)];
+
             $ad->setTitle($title)
                 ->setCoverImage($coverImage)
                 ->setIntroduction($introduction)
                 ->setContent($content)
                 ->setprice(rand(80, 200))
-                ->setRooms(rand(1, 5));
+                ->setRooms(rand(1, 5))
+                ->setAuthor($user);
 
             for ($j = 1; $j <= rand(2, 5); $j++) {
                 $image = new Image();
