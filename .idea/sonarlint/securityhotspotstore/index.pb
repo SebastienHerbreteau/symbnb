@@ -25,3 +25,37 @@ S
 #templates/partials/footer.html.twig,0\4\04ab3cf5bdb26445f5369d44c28f621f80fba642
 S
 #templates/partials/script.html.twig,a\4\a4706a38b144762fdec28b00cf896cb31eaae721
+F
+src/Form/ImageType.php,8\7\870ef4629e379af67632f80e83cadb75e9535f81
+O
+src/Controller/AdController.php,d\6\d603208054867be3b8db51a39d747da64b14f820
+K
+templates/ad/show.html.twig,3\0\307c98e1356f72ca453a8019fd245f2d413cf125
+B
+public/css/app.css,a\e\aed169877220cb60c39687eb7ae1de7d4fb7946f
+D
+src/Entity/Image.php,f\0\f05d6e2bb75f1a6c4aa85d8cfaa1c0fe0013e2d2
+C
+src/Form/AdType.php,4\1\4177d140af15f7422ea32bb1070ec04b726fc58d
+R
+"templates/ad/_collection.html.twig,0\d\0d1ed60dfed5b6945b8af2bc1314e609738b5617
+?
+public/js/ad.js,d\a\daf1206746ac65fc0688da769967acb884d2bc83
+H
+templates/home.html.twig,3\8\38ac5fc300d52f94b369e87fbb1937abe29f831f
+H
+templates/base.html.twig,f\f\ffb3f1cfd73fdec1f0c80c63d0b5bbc1fff22022
+Q
+!templates/partials/head.html.twig,b\5\b5b2bf42bacf4c221a0784b49a25176264097119
+K
+templates/ad/edit.html.twig,e\6\e68328068fd251e9b44378e8526d8494f11c45f1
+J
+templates/ad/new.html.twig,3\7\370d0c1b9af4f80702b11de32e4080109306c710
+A
+src/Entity/Ad.php,6\a\6ac19b5f0d35804f3a34fe65702a0d7c945605b9
+T
+$migrations/Version20230726143450.php,c\a\caa159f46bd619b09d2154a78888bd23ae81803a
+P
+ src/DataFixtures/AppFixtures.php,b\d\bd40e5504ff9d25586c516537316c24981df19f7
+C
+src/Entity/User.php,0\a\0a3e99b9da178509aeb5b3fa6f5dce46bc0eb8be

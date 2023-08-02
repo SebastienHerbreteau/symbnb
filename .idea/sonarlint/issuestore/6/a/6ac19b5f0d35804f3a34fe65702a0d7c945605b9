@@ -1,0 +1,4 @@
+
+kphp:S103 "KSplit this 157 characters long line (which is greater than 120 authorized).(ÑŞÎøÿÿÿÿ8Àñ…ö˜1
+z	php:S1448"^Class "Ad" has 22 methods, which is greater than 20 authorized. Split it into smaller classes.(‚¦–Õ8º“ç”™1
+Q	php:S1066Ú"/Merge this if statement with the enclosing one.(ŸÍòÿÿÿÿÿ8Àñ…ö˜1
