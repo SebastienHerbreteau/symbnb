@@ -8,10 +8,16 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
  * @ORM\HasLifecycleCallbacks()
+ * @UniqueEntity (
+ *     fields={"email"},
+ *     message="Cet email est déjà utilisé, merci de le modifier"
+ * )
  */
 class User implements UserInterface
 {
@@ -24,21 +30,33 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(
+     *     message="Merci de renseigner votre prénom"
+     * )
      */
     private $firstName;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(
+     *     message="Merci de renseigner votre nom"
+     * )
      */
     private $lastName;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Email(
+     *     message="Veuillez renseigner un email valide"
+     * )
      */
     private $email;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Url(
+     *     message="Merci de renseigner une URL valide"
+     * )
      */
     private $picture;
 
@@ -47,13 +65,23 @@ class User implements UserInterface
      */
     private $hash;
 
+    public $passwordConfirm;
+
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(
+     *     min=10,
+     *     minMessage="Votre introduction doit faire au moins 10 caractères"
+     * )
      */
     private $introduction;
 
     /**
      * @ORM\Column(type="text")
+     *  @Assert\Length(
+     *     min=100,
+     *     minMessage="Votre description doit faire au moins 100 caractères"
+     * )
      */
     private $description;
 
