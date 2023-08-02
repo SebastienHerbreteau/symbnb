@@ -9,6 +9,7 @@ use Doctrine\Common\Collections\Collection;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
+use App\Entity\User;
 
 /**
  * @ORM\Entity(repositoryClass=AdRepository::class)
@@ -223,12 +224,12 @@ class Ad
         return $this;
     }
 
-    public function getAuthor(): ?user
+    public function getAuthor(): ?User
     {
         return $this->author;
     }
 
-    public function setAuthor(?user $author): self
+    public function setAuthor(?User $author): self
     {
         $this->author = $author;
 
