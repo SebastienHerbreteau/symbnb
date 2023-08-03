@@ -55,27 +55,21 @@
                 </div>
             </div>
             <div class="col">
+                {% set a = ad.author %}
                 <div class="row">
-                    <div class="col-4">
-                        <img src="https://picsum.photos/64/64" alt="Avatar de ">
+                    <div class="col-3">
+                        <a href="{{ path('user_show', {'slug' : a.slug}) }}">
+                        <img class="avatar" src="{{ a.picture }}" alt="Avatar de {{ a.fullName}}">
+                        </a>
                     </div>
                     <div class="col">
-                        <h3>Joseph Dupont</h3>
-                        <span class="badge rounded-pill bg-primary">3 annonces</span>
+                        <a href="{{ path('user_show', {'slug' : a.slug}) }}">
+                        <h3>{{ a.fullName }}</h3>
+                        </a>
+                        <span class="badge rounded-pill bg-primary">{{ a.ads | length }} annonces</span>
                     </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, est, in. A animi aspernatur assumenda
-                    distinctio esse laboriosam modi, recusandae.</p>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, est, in. A animi aspernatur assumenda
-                    distinctio esse laboriosam modi, recusandae.Blanditiis natus similique voluptates. Maxime molestias
-                    pariatur possimus quas. Architecto assumenda culpa debitis.</p>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, est, in. A animi aspernatur assumenda
-                    distinctio esse laboriosam modi, recusandae.Blanditiis natus similique voluptates. Maxime molestias
-                    pariatur possimus quas. Architecto assumenda culpa debitis, ducimus laborum officiis quaerat sunt
-                    tenetur voluptate?Accusamus, assumenda quisquam! A cumque dolorem enim et fugiat minus molestias
-                    mollitia nam nesciunt optio praesentium quia, sed, totam unde.</p>
+                {{ a.description | raw }}
             </div>
         </div>
     </div>

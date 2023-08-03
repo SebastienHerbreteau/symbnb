@@ -65,6 +65,9 @@ class User implements UserInterface
      */
     private $hash;
 
+    /**
+     * @var @Assert\EqualTo(propertyPath="hash", message="Les mot de passe ne correspondent pas")
+     */
     public $passwordConfirm;
 
     /**
@@ -112,6 +115,9 @@ class User implements UserInterface
      */
     private $ads;
 
+    public function getFullName(){
+        return "{$this->firstName} {$this->lastName}";
+}
     public function __construct()
     {
         $this->ads = new ArrayCollection();
