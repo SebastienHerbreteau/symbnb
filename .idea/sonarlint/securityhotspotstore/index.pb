@@ -43,13 +43,31 @@ M
 config/packages/security.yaml,c\5\c5f941b4d4e9404f23935164fabdd261abb68e93
 X
 (templates/account/registration.html.twig,1\1\11b80dd69bbc93c13155ba4757a22003e930386f
-L
-src/Form/ApplicationType.php,8\9\89abf0721c164abeaa549386ee432e2fcab7480f
-C
-src/Form/AdType.php,4\1\4177d140af15f7422ea32bb1070ec04b726fc58d
-P
- src/DataFixtures/AppFixtures.php,b\d\bd40e5504ff9d25586c516537316c24981df19f7
 A
 src/Entity/Ad.php,6\a\6ac19b5f0d35804f3a34fe65702a0d7c945605b9
 M
 src/Form/RegistrationType.php,4\c\4c94c92a4acc2587fed4d6a58cdfc5b1b9b6c9e1
+S
+#templates/account/profile.html.twig,a\d\ad8e23ac2a192a29b269ac6809e2da02542a0ca7
+M
+src/Entity/PasswordUpdate.php,c\b\cbfaaa1c5d9c8138ecb2be8f001e4d026c4e4f38
+T
+$templates/account/password.html.twig,2\6\26ac0f6bd5d17eaf553c981c044c21db7f64232a
+Q
+!src/Controller/HomeController.php,a\d\ad8b439416d1e02614f47c5b471c7c4e587dca82
+Q
+!src/Controller/UserController.php,8\7\87b99206717ccce222f05190f36b6273e3ea6228
+H
+templates/base.html.twig,f\f\ffb3f1cfd73fdec1f0c80c63d0b5bbc1fff22022
+B
+public/css/app.css,a\e\aed169877220cb60c39687eb7ae1de7d4fb7946f
+L
+templates/ad/index.html.twig,2\9\29c7b7a9c211ce601b9f94ee05ee7df4da387def
+J
+templates/ad/_ad.html.twig,a\0\a0f20acdbf614013d72e343b314f4c18eec1c991
+K
+templates/ad/show.html.twig,3\0\307c98e1356f72ca453a8019fd245f2d413cf125
+T
+$src/Controller/AccountController.php,1\f\1f13eb3bf91831009bc179df01bce8d5217b263f
+N
+templates/user/index.html.twig,4\3\43dc2f388a072ee1388ad42012d3bdcbc01c3a41
